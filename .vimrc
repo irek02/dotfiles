@@ -1,6 +1,6 @@
 syntax on
 set background=dark
-" solarized options 
+" solarized options
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_termcolors=256
@@ -11,7 +11,7 @@ set guifont=Menlo\ Regular:h13
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set wildignore+=*/node_modules/*,*/dist/*,*/coverage/*,*/vendor/* 
+set wildignore+=*/node_modules/*,*/dist/*,*/coverage/*,*/vendor/*
 set backupdir=$TMPDIR//
 set directory=$TMPDIR//
 set updatetime=250
@@ -24,8 +24,8 @@ set foldmethod=indent
 set nofoldenable    " disable folding
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(node_modules|dist|coverage|vendor)$'
-  \ }
+\ 'dir':  '\v[\/]\.(node_modules|dist|coverage|vendor)$'
+\ }
 
 
 
@@ -58,14 +58,14 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-"##############################################################################                                                                         
-" Easier split navigation                                                                                                                               
-"##############################################################################                                                                         
+"##############################################################################
+" Easier split navigation
+"##############################################################################
 
 " Use ctrl-[hjkl] to select the active split!
-nmap <silent> <c-k> :wincmd k<CR>                                                                                                                       
-nmap <silent> <c-j> :wincmd j<CR>                                                                                                                       
-nmap <silent> <c-h> :wincmd h<CR>                                                                                                                       
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
 map <D-e> :CtrlPMRUFiles<CR>
@@ -80,7 +80,7 @@ set laststatus=2
  set so=7
 
  " Avoid garbled characters in Chinese language windows OS
- let $LANG='en' 
+ let $LANG='en'
 " set langmenu=en
 " source $VIMRUNTIME/delmenu.vim
 " source $VIMRUNTIME/menu.vim
@@ -110,22 +110,22 @@ set laststatus=2
  " Ignore case when searching
  set ignorecase
 
- " When searching try to be smart about cases 
+ " When searching try to be smart about cases
  set smartcase
 
  " Highlight search results
  set hlsearch
 
  " Makes search act like search in modern browsers
- set incsearch 
+ set incsearch
 
  " Don't redraw while executing macros (good performance config)
- set lazyredraw 
+ set lazyredraw
 
  " For regular expressions turn magic on
  set magic
 
  " Show matching brackets when text indicator is over them
- set showmatch 
+ set showmatch
  " How many tenths of a second to blink when matching brackets
  et mat=2
