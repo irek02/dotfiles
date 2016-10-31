@@ -27,6 +27,8 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(node_modules|dist|coverage|vendor)$'
   \ }
 
+
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -40,6 +42,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'jaxbot/semantic-highlight.vim'
+Plugin 'vim-airline/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -67,3 +70,62 @@ nmap <silent> <c-l> :wincmd l<CR>
 
 map <D-e> :CtrlPMRUFiles<CR>
 map <D-1> :NERDTreeFind<CR>
+
+set laststatus=2
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM user interface
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ " Set 7 lines to the cursor - when moving vertically using j/k
+ set so=7
+
+ " Avoid garbled characters in Chinese language windows OS
+ let $LANG='en' 
+" set langmenu=en
+" source $VIMRUNTIME/delmenu.vim
+" source $VIMRUNTIME/menu.vim
+"
+ " Turn on the WiLd menu
+ set wildmenu
+
+ if has("win16") || has("win32")
+  set wildignore+=.git\*,.hg\*,.svn\*
+ else
+   set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+ endif
+
+ "Always show current position
+ set ruler
+
+ " Height of the command bar
+ set cmdheight=2
+
+ " A buffer becomes hidden when it is abandoned
+ set hid
+
+ " Configure backspace so it acts as it should act
+ set backspace=eol,start,indent
+ set whichwrap+=<,>,h,l
+
+ " Ignore case when searching
+ set ignorecase
+
+ " When searching try to be smart about cases 
+ set smartcase
+
+ " Highlight search results
+ set hlsearch
+
+ " Makes search act like search in modern browsers
+ set incsearch 
+
+ " Don't redraw while executing macros (good performance config)
+ set lazyredraw 
+
+ " For regular expressions turn magic on
+ set magic
+
+ " Show matching brackets when text indicator is over them
+ set showmatch 
+ " How many tenths of a second to blink when matching brackets
+ et mat=2
